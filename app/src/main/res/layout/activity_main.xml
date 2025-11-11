@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_marginLeft="10dp">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Food Order App"
+    android:textStyle="bold"
+    android:textAlignment="center"
+    android:textSize="24sp"
+    android:padding="10dp"
+    android:id="@+id/txtmain"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose your Meal"
+        android:layout_below="@id/txtmain"
+        android:id="@+id/txtchoose"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/txtchoose"
+        android:id="@+id/layoutLinear">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdgMeal"
+            android:orientation="horizontal"
+            >
+       <RadioButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Pizza"
+           android:id="@+id/radPizza"
+           android:layout_weight="1"
+           />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Burger"
+                android:id="@+id/radBurger"
+               android:layout_weight="1"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pasta"
+                android:id="@+id/radPasta"
+                android:layout_weight="1"
+                />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutLinear"
+        android:text="Select Extras"
+        android:id="@+id/txtExtras"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtExtras"
+        android:text="Extra Cheese "
+        android:id="@+id/chkCheese"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtExtras"
+        android:text="Extra Sauce "
+        android:id="@+id/chkSauce"
+        android:layout_toRightOf="@id/chkCheese"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtExtras"
+        android:text="Add Fries "
+        android:id="@+id/chkFries"
+        android:layout_toRightOf="@id/chkSauce"
+        />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Choose your drink:"
+   android:id="@+id/txtDrink"
+    android:layout_below="@id/chkCheese"
+    android:layout_marginBottom="10dp"
+    />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDrink"
+       android:id="@+id/spnDrinks"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delivery Option"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtDelivery"
+        android:layout_below="@id/spnDrinks"
+        />
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtDelivery"
+        android:text="Home Delivery"
+        android:id="@+id/swtDelivery"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate Our App:"
+        android:id="@+id/txtRate"
+        android:layout_below="@id/swtDelivery"
+        />
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRate"
+        android:numStars="5"
+        android:id="@+id/rateApp"
+        android:stepSize="1"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rateApp"
+        android:text="Place Order"
+        android:id="@+id/btnOrder"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSummary"
+        android:layout_below="@id/btnOrder"
+        android:textColor="@android:color/holo_blue_bright"
+        />
+</RelativeLayout>

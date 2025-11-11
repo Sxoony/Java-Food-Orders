@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FoodOrder</string>
+    <array name="drink_items">
+        <item>Coke</item>
+        <item>Pepsi</item>
+        <item>Fanta</item>
+    </array>
+</resources>
